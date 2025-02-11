@@ -33,6 +33,23 @@ Implicit Razor expressions start with `@` followed by C# code
 > ```
 > <p>@GenericMethod<int>()</p>
 > ```
-### 
+
+### Explicit Razor expressions
+Explicit Razor expressions consist of an @ symbol with balanced parenthesis.
+
+```
+<p>Last week this time: @(DateTime.Now - TimeSpan.FromDays(7))</p>
+```
+
+```
+@{
+    var joe = new Person("Joe", 33);
+}
+
+<p>Age@(joe.Age)</p>
+```
+
+Any content within the @() parenthesis is evaluated and rendered to the output.
+
 ## reference
 [ASP.NET Razor](https://zh.wikipedia.org/zh-tw/ASP.NET_Razor)
