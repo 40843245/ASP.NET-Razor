@@ -39,6 +39,11 @@ Explicit Razor expressions consist of an @ symbol with balanced parenthesis.
 
 ```
 <p>Last week this time: @(DateTime.Now - TimeSpan.FromDays(7))</p>
+
+```
+
+```
+<p>@(GenericMethod<int>())</p>
 ```
 
 ```
